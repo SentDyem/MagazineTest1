@@ -9,6 +9,7 @@ namespace MagazineTest.Controllers
 {
     public class HomeController : Controller
     {
+
         BookContext db = new BookContext();
         string Message;
         public ActionResult Index()
@@ -25,7 +26,7 @@ namespace MagazineTest.Controllers
         }
 
         [HttpPost]
-        public string Buy(Purchase purchase )
+        public string Buy(Purchase purchase)
         {
             purchase.Date = DateTime.Now;
             db.Purchases.Add(purchase);
